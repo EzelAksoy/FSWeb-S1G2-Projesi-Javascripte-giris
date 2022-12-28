@@ -19,7 +19,9 @@ Aşağıdakileri yapın:
 
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
-
+let surucuYasi = 22;
+if (surucuYasi > 18){console.log('true');}
+else {console.log ('false');}
 
 
 /*
@@ -33,6 +35,10 @@ Aşağıdakileri yapınız:
 
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
+let birinciDeger = 'ramazan';
+let ikinciDeger = 'ezel';
+if (birinciDeger === ikinciDeger){birinciDeger="isimDegisti";console.log(birinciDeger);}
+else {console.log(birinciDeger);}
 
 
 
@@ -48,6 +54,13 @@ Aşağıdakileri yapın:
 
    İPUCU: Number metoduna bakabilirsin
 */
+let year = '1999';
+console.log(year);
+
+year = parseInt(year);
+console.log(year);
+console.log(year + 1);
+
 
 
 
@@ -60,10 +73,18 @@ Aşağıdakileri yapın:
    2. Aşağıdaki çarpma fonksiyonunu çağırarak, 2 sayıyı bu fonksiyona iletin
    3. a ve b'yi çarpıp, sonucu dönün
 */
-
-function carpma(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function carpma(a,b){
+  let sonuc = a*b;return sonuc;
 }
+console.log(carpma(20,15));
+
+
+function toplama(a,b,c){
+  let sonuc = a+b+c;return sonuc;
+}
+console.log(toplama(10,15,35));
+
+
 
 
 
@@ -77,10 +98,10 @@ Aşağıdakileri yapın:
  3. Hesaplanan köpeğin yaşını dönün.
  */
 
-function kopeginYasi(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function kopeginYasi(a){return 7*a;
+  
 }
-
+console.log(kopeginYasi(5));
 
 
 /* Görev 3 */
@@ -105,10 +126,22 @@ OYUNUN KURALLARI: Makas Kağıdı yener| Kağıt Taşı yener | Taş Makas'ı ye
 */
 
 function oyun(oyuncu, bilgisayar){
-  /*buraya kodunu yazabilirsin*/
+if(oyuncu === bilgisayar){return "Beraberlik";}
+else if ((oyuncu == 'Taş' && bilgisayar == 'Makas') || (oyuncu == 'Makas' && bilgisayar == 'Kağıt') || (oyuncu == 'Kağıt' && bilgisayar == 'Taş'))
+{return "Kazandın!";}
+else {return "Kaybettin!";}
 }
 
 
+let bilgisayarRandom = Math.random();
+console.log(bilgisayarRandom);
+let bilgisayarHamle;
+if(bilgisayarRandom <= 0.30){bilgisayarHamle ='Taş';}
+else if (0.30 < bilgisayarRandom && bilgisayarRandom <= 0.60){bilgisayarHamle = 'Kağıt';}
+else {bilgisayarHamle = 'Makas';}
+console.log(bilgisayarHamle);
+
+console.log(oyun('Kağıt',bilgisayarHamle));
 
 /* Görev 4 : Metrik Dönüştürücü */
 
@@ -120,10 +153,12 @@ Aşağdakileri milDonusturucu fonksiyonunu kullanarak yapın:
 3. Mil değerini geri dönün
 */
 
-function milDonusturucu(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function milDonusturucu(a){
+   return 1.618*a;
+  
 }
 
+console.log(milDonusturucu(5));
 
 
 //Görev 4b - Santimetreden Feet
@@ -134,9 +169,11 @@ Aşağıdakileri feetDonusturucu fonsiyonunu kullanarak yapın:
 3. feet değerini geri dönün
 */
 
-function feetDonusturucu(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function feetDonusturucu(a){return a/30.17;
 }
+
+console.log(feetDonusturucu(150));
+
 
 
 
@@ -153,9 +190,19 @@ Aşağıdakileri cocukSarkisi fonksiyonunda yapın:
 4. Bu döngüde, her seferinde cocukSarkisi fonsiyonu çalışsın ve console.log'a dönen metni yazdırsın.
 */
 
-function cocukSarkisi(/*buraya kodunu yazabilirsin*/){
-      /*buraya kodunu yazabilirsin*/
+function cocukSarkisi(sayi){
+  let metin = sayi +"küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!"
+     return metin; /*buraya kodunu yazabilirsin*/
 }
+
+
+
+for(let i=5; i>0; i=i-1){
+  console.log(cocukSarkisi(i));
+}
+
+
+
 
 
 /* Görev 6 : Not Hesaplayıcı */
@@ -173,9 +220,15 @@ Aşağdakileri notHesapla fonksiyonunda yapın.
  dönün
 */
 
-function notHesapla(/*buraya kodunu yazabilirsin*/){
+function notHesapla(not){
+  if(90 <= not) {return 'A aldın';}
+  else if(80 <= not) {return 'B aldın';}
+  else if(70 <= not) {return 'C aldın';}
+  else if(60 <= not) {return 'D aldın';}
+  else {return 'F aldın';}
 /*buraya kodunu yazabilirsin*/
 }
+console.log(notHesapla(75));
 
 
 
